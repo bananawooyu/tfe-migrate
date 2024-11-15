@@ -4,6 +4,12 @@
 ## Terraform configuration
 
 terraform {
+  cloud {
+    organization = "tf-cn"
+    workspaces {
+      name = "tfe-migrate"
+    }
+  }
   required_providers {
     random = {
       source  = "hashicorp/random"
